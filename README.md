@@ -1,14 +1,12 @@
-# portfolio-var-analysis-reliance-tcs
-Value at Risk (VaR) estimation for a Rs 100 crore portfolio equally invested in Reliance Industries and TCS using historical, parametric, and modified (Monte Carlo) methods in R. Includes daily returns analysis, risk visualization, and interpretation of losses at 95% confidence.
+# Portfolio Value at Risk (VaR) Analysis — Reliance & TCS
+Value at Risk (VaR) estimation for a Rs 100 crore portfolio equally invested in Reliance Industries and TCS using historical, parametric, and modified (Monte Carlo) methods. Includes daily returns analysis, risk visualization, and interpretation of losses at 99% confidence for Reliance and 95% confidence for TCS, and performed backtesting (methods includes Traffic light approach and Kupiec Test).
 
-# 📉 Portfolio Value at Risk (VaR) Analysis — Reliance & TCS
+## Project Overview
+**Inroduction:** This project calculates and interprets the **Value at Risk (VaR)** for a Rs 100 crore portfolio equally allocated to **Reliance Industries** and **TCS**. Using daily returns and multiple VaR methodologies, the analysis quantifies the potential one-day loss at a 95% and 99% confidence level and visualizes the return distribution with risk thresholds. The analysis also includes Expected Shortfall (ES) to capture tail risk beyond VaR thresholds. Also utize the regulatory approch of Backtesting, Basel Traffic Light Approach and Kupiec Test to identify wheather the 1-day VaR estimate is comfortably within the statistically accepted range for a well-callibrated model.
 
-## 📝 Project Overview
-This project calculates and interprets the **Value at Risk (VaR)** for a Rs 100 crore portfolio equally allocated to **Reliance Industries** and **TCS**. Using daily returns and multiple VaR methodologies, the analysis quantifies the potential one-day loss at a 95% confidence level and visualizes the return distribution with risk thresholds.
+**Objective:** This work provides insights to help investors and risk managers assess and manage portfolio risks effectively.
 
----
-
-## 📚 Topics Covered
+## Topics Covered
 - Portfolio construction with two Indian large-cap stocks (Reliance & TCS)
 - Daily log return calculation
 - Portfolio variance-covariance estimation
@@ -21,61 +19,30 @@ This project calculates and interprets the **Value at Risk (VaR)** for a Rs 100 
 
 ---
 
-## ⚙️ Methodology
+## Data & Methodology
 1. **Data Collection**  
    Historical prices (2020-01-01 to 2025-03-31) from Yahoo Finance for `RELIANCE.BO` and `TCS.BO`.
-
-2. **Portfolio Setup**  
+   
+3. **Portfolio Setup**  
    - Equal weights: 50% Reliance, 50% TCS  
    - Portfolio value: Rs 100 crores  
    - Holding period: 1 trading day
 
-3. **Risk Computation**  
+4. **Risk Computation**  
    - Compute daily log returns
    - Build covariance matrix
-   - Apply three VaR approaches for 95% confidence
+   - Apply three VaR approaches for 99% confidence for Reliance and 95% confidence for TCS.
+   - Perfomed Expected Shortfall and Backtesting.
 
-4. **Visualization**  
+5. **Visualization**  
    - Histogram of portfolio returns with density curve
    - VaR lines for Historical, Gaussian, and Modified methods
 
 ---
 
-## 📊 Key Result & Interpretation
-- **Maximum 1-Day Loss @ 95% Confidence:** ~ **Rs 2.48 crores**
+## Key Result & Interpretation
+- **Maximum 1-Day Loss @ 99% Confidence:** for Reliance ~ **Rs 4.59 crores** and **Maximum 1-Day Loss @ 95% Confidence:** for ~ **3.39 crores**
 - **Interpretation:**
-  - There is a 5% probability that the portfolio will lose **more than Rs 2.48 crores** in a single day under current market conditions.
+  - There is a small probability (1% for Reliance and 5% for TCS) that the portfolio will lose **more than Rs 4.59 crores** in a single day under current market conditions.
 
 ---
-
-## 📦 Requirements
-Install required R packages:
-install.packages(c("quantmod", "PerformanceAnalytics", "tidyverse", "tseries"))
-
-
----
-
-## ▶️ Usage
-1. Clone/download this repository.
-2. Open `Case-study-on-VaR-Portfolio.R` in R or RStudio.
-3. Run the script — outputs include:
-   - VaR values in Rs for each method
-   - Histogram with VaR thresholds
-   - Interpretation statements in console
-
----
-
-## 📂 Repository Structure
-
-
----
-
-## 📖 References
-- Jorion, P. (2007), *Value at Risk: The New Benchmark for Managing Financial Risk*
-- Yahoo Finance historical data
-- R packages: `quantmod`, `PerformanceAnalytics`, `tidyverse`, `tseries`
-
----
-
-*This project is for educational purposes and demonstrates portfolio risk measurement techniques for equity investments using R.*
-
