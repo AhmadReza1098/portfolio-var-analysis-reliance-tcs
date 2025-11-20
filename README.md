@@ -41,7 +41,7 @@ Value at Risk (VaR) estimation for a Rs 100 crore portfolio equally invested in 
 ---
 
 ## Key Result & Interpretation
-- **Maximum 1-Day Loss @ 99% Confidence:** for Reliance ~ **Rs 4.59 crores** and **Maximum 1-Day Loss @ 95% Confidence:** for ~ **3.39 crores**
+- **Maximum 1-Day Loss @ 99% Confidence:** for Reliance ~ **Rs 4.59 crores** and **Maximum 1-Day Loss @ 95% Confidence:** for TCS~ **3.39 crores**
 - **Interpretation:**
   - There is a small probability (1% for Reliance and 5% for TCS) that the portfolio will lose **more than Rs 4.59 crores** in a single day under current market conditions.
 
